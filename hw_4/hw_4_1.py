@@ -1,0 +1,8 @@
+apple1 = input("Укажите количество яблок в карзине: ")
+var1 = float(apple1)
+student1 = input("Укажите количество ученников в группе: ")
+var2 = float(student1)
+print("каждый ученик получил равное количество яблок : ", end="")
+print(var1 // var2)
+print("в карзине осталось яблок : ", end="")
+print(var1 % var2)
