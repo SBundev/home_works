@@ -4,7 +4,7 @@ count_3 = 0  # К-во введенных чисел
 min = 500 ** 500
 max = 0
 summ = 0
-mid = 0
+mid = float(0)
 i = 0
 while True:
     n = int(input("""Введите любые натрульне числа,
@@ -22,12 +22,12 @@ while True:
     if n != summ or n == summ:
         summ = summ + n
     if n % 2 == 0 and n % 1 == 0:
-        count_3 += 1
-        i = count_3 - 1
-        mid = summ / count_3
-        print(summ)
+        i += 1
+        count_3 = i + 1
+        mid = float(summ // count_3)
 print("К-во четных чисел :", count_1)
 print("К-во не четных чисел :", count_2)
+print("К-во введеных чисел :", count_3)
 print("Максимальное введеное число : ", max)
 print("Минимальное веденное число : ", min)
 print("Сумма всех введеных чисел :", summ)
