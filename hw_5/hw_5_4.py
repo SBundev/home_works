@@ -4,4 +4,4 @@ for i in range(a):
     if b > a:
         break
     elif b <= a:
-        print("Квадрат числа : ", i, "=", b)
+        print("Квадрат числа : ", i, "=", b )
