@@ -1,7 +1,7 @@
 while True:
     inp_mesg = input('Введите словосочетание из двух слов:')
     inp_mesg = inp_mesg.lstrip()
-    test = len(inp_mesg.split())
+    test = len(inp_mesg.split(" "))
     var_1 = inp_mesg.find(" ")
     var_2 = inp_mesg[:var_1]
     var_3 = inp_mesg[var_1 + 1:]
