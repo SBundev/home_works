@@ -7,7 +7,6 @@ while True:
     var_3 = inp_mesg[var_1 + 1:]
     var_2 = var_2[::-1]
     var_3 = var_3[::-1]
-
     if test == 2:
         print(var_2.capitalize(), var_3.capitalize())
         break
