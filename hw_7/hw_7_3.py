@@ -1,11 +1,11 @@
 lst_1 = list(input("Введите список состоящий из чисел : ").split())
 lst_2 = list(input("Введите список состоящий из чисел : ").split())
-count = 0
-for n in range(0,len(lst_1)-1):
-    for k in range(0,len(lst_2)-1):
-        if lst_1[n] != lst[k]:
-            count += 1
-        else:
-            print("Нет уникальных чисел")
-
-Print(count)
+lst_3 = []
+for n in lst_1:
+    if n not in lst_2:
+        lst_3.append(n)
+for n in lst_2:
+    if n not in lst_1:
+        lst_3.append(n)
+#print(lst_3)
+print(len(lst_3))
