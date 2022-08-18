@@ -7,5 +7,5 @@ print(dictionary)
 c = {**dictionary_1, **dictionary_2}
 print(c)
 
-dictionary_1.update( dictionary_2)
+dictionary_1.update(dictionary_2)
 print(dictionary_1)
