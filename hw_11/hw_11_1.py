@@ -4,9 +4,8 @@ def func(x, y):
         for n in range(1, x + 1):
             if i + n == y:
                 summ = True
-                print(i, n)
                 break
     return summ
 
-
 print(func(10, 19))
+print(func(8, 22))
