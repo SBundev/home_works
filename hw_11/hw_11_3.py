@@ -1,9 +1,12 @@
-def func(x=1, y=100):
-    for n in range(x, y):
-        for i in range(2, y+1):
-            if n % i == 0 or n == i:
-                break
+def prost(x, y):
+    for n in range(x, y + 1):
+        if n > 1:
+            for i in range(2, n):
+                if (n % i) == 0:
+                    break
             else:
                 yield n
-for i in func(10, 19):
-    print(i, end=" ")
+
+
+for k in prost(2, 100):
+    print(k, end=" ")
