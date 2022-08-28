@@ -1,11 +1,9 @@
 def func(x=1, y=100):
-    prosto_namber = []
     for n in range(x, y):
-        for i in range(1, 100):
-            if n % i == 0:
+        for i in range(2, y+1):
+            if n % i == 0 or n == i:
                 break
             else:
-                prosto_namber.append(n)
-    return prosto_namber
-
-print(func(10, 19))
+                yield n
+for i in func(10, 19):
+    print(i, end=" ")
