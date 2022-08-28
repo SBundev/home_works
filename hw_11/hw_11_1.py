@@ -7,5 +7,6 @@ def func(x, y):
                 break
     return summ
 
+
 print(func(10, 19))
 print(func(8, 22))
