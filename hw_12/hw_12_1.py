@@ -1,6 +1,21 @@
 import random
 
 
+def sort_a_s():
+    for i in range(n):
+        for j in range(n):
+            if a[i][j] <= 9:
+                print('    {}'.format(a[i][j]), end=' ')
+            else:
+                print('   {}'.format(a[i][j]), end=' ')
+        print()
+    for k in range(n):
+        if s[k] < 100:
+            print('  ', s[k], end=' ')
+        else:
+            print(' ', s[k], end=' ')
+
+
 def sort():
     for i in range(n):
         for j in range(n - i - 1):
@@ -27,9 +42,11 @@ if n < 5:
     print("Вы вввели не верное число")
 else:
     a = [[random.randint(1, 50) for i in range(n)] for j in range(n)]
-    # sort()
-    print(*a, sep='\n')
     s = (list(map(sum, zip(*a))))
-    print(s)
+    print("Матрица до сортировки")
+    sort_a_s()
+    print()
+    print("Матрица после сортировки")
+    print()
     sort()
-    print(*a, s, sep='\n')
+    sort_a_s()
