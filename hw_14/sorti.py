@@ -47,7 +47,32 @@ def sorti_quick(nums):
     _sorti_quick(nums, 0, len(nums) - 1)
 
 
+def sorti_insert(nums):
+    #print(nums)
+    for i in range(1, len(nums)):
+        item_to_insert = nums[i]
+        j = i - 1
+
+        while j >= 0 and nums[j] > item_to_insert:
+            nums[j+1] = nums[j]
+            j -= 1
+
+        nums[j + 1] = item_to_insert
+
+
+def sorti_bubble(nums):
+
+    n = len(nums)
+    for i in range(n-1):
+        for j in range(n-2, i - 1, -1):
+            if nums[j+1] < nums[j]:
+                nums[j], nums[j+1] = nums[j+1], nums[j]
+
+
+__all__ = ['sorti_insert', 'sorti_bubble', 'sorti_quick']
 if __name__ == "__main__":
     lst = [12, 15, 97, 64, 15, 97, 5496, 125, 84, 31, 17]
-    sorti_quick(lst)
+    sorti_bubble(lst)
     print(lst)
+
+
