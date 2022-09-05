@@ -17,8 +17,8 @@ if __name__ == "__main__":
                 print("  {}".format(b[j]), end=' ')
         print("  |{}".format(k), end=' ')
         print()
-    for i in range(m):
-        print(" ---", end='')
+    for i in range(n):
+        print("  ---", end='')
     print()
     for i in range(n):
         k = 0
