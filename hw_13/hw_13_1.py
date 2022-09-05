@@ -24,5 +24,5 @@ if __name__ == "__main__":
         k = 0
         for j in range(m):
             k += a[j][i]
-        print("   {}".format(k), end='')
+        print("  {}".format(k), end='')
     print()
