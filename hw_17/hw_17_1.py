@@ -1,4 +1,4 @@
-txt = input("введите название файла : ")
+txt = input("Введите название файла : ")
 with open(txt, encoding="utf-8", mode="wt") as fid:
     while True:
         line = input()
