@@ -27,5 +27,5 @@ if __name__ == "__main__":
     r = [randint(10, 99) for c in range(0, 10)]
     dct = {k: v for k, v in zip(n, r)}
     key = input("Введите число key, от 1 до 10 : ")
-    default_value = str(input("Введите число default_value: "))
+    default_value = input("Введите число default_value: ")
     dict_handler(dct, key, default_value)
