@@ -15,7 +15,8 @@ def dict_handler(dct, key, default_value):
               ", не входит в существующий словарь", dct)
     else:
         dct[key] = default_value
-        print("Все правильно, ключ ", key, " входит в словарь", dct)
+        print(f"Все правильно, ключ ", key, f" входит в словарь,"
+                                            f" со значение {default_value}")
 
     finally:
         print("Конец прграммы ")
@@ -27,7 +28,4 @@ if __name__ == "__main__":
     dct = {k: v for k, v in zip(n, r)}
     key = input("Введите число key, от 1 до 10 : ")
     default_value = str(input("Введите число default_value: "))
-    print(dct)
-    print(key)
-    print(default_value)
     dict_handler(dct, key, default_value)
