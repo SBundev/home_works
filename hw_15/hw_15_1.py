@@ -15,4 +15,4 @@ def except_(a, b):
 if __name__ == "__main__":
     a = input("Введите число A: ")
     b = input("Введите число B: ")
-    print(except_(a, b))
+    except_(a, b)

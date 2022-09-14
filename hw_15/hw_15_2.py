@@ -1,27 +1,33 @@
 from random import randint
 
+
 def dict_handler(dct, key, default_value):
     try:
-        #value = dct[key]
-        keys = dct.keys()
-        assert key in keys, "yt d[jlbn"
+        key_1 = int(key)
+        value = dct[key_1]
+    except ValueError as t:
+        print(f"Неверный ввод, введенная переменная  не являются числом :{t}")
     except KeyError as k:
-        print(f"данный ключ не входит в существующий словарь :{k}")
+        print(f"Есть исключение, данный ключ {k},"
+              f"не входит в существующий словарь ")
         dct_1 = dict.fromkeys(key, default_value)
-        print("Словарь ", dct_1, " с ключем", key, " не входит в существующий словарь", dct)
+        print("Словарь ", dct_1, " с ключем", key,
+              ", не входит в существующий словарь", dct)
     else:
-        dct_1 = dict.fromkeys(key, default_value)
-        print("Все правильно, ключ ", key, " входит в словарь", dct, ", из словаря", dct_1)
+        dct[key] = default_value
+        print("Все правильно, ключ ", key, " входит в словарь", dct)
 
     finally:
         print("Конец прграммы ")
 
 
 if __name__ == "__main__":
-    n = [randint(1, 10) for i in range(0, 20)]
-    r = [randint(10, 99) for c in range(0, 20)]
+    n = [randint(1, 10) for i in range(0, 10)]
+    r = [randint(10, 99) for c in range(0, 10)]
     dct = {k: v for k, v in zip(n, r)}
-    key = str(input("Введите число key: "))
+    key = input("Введите число key, от 1 до 10 : ")
     default_value = str(input("Введите число default_value: "))
     print(dct)
-    print(dict_handler(dct, key, default_value))
+    print(key)
+    print(default_value)
+    dict_handler(dct, key, default_value)
